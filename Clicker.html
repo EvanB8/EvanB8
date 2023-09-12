@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    img {
+      margin-left: 10%;
+      margin-top: 10%;
+      width: 30%;
+    }
+  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+
+<body>
+  <p id="NotCringe"> cringe </p>
+  <img id="cringe" src="cringe.jpg">
+
+  <img id="Megaupgrade" src="MEGA UPGRADE.jpg">
+</body>
+
+</html>
+<script>
+  setInterval(clickHandler, 1000)
+  var scoreperclick = 1
+  var score = 0
+  document.getElementById("cringe").addEventListener("click", clickHandler)
+  document.getElementById("fhs").addEventListener("click", upgrade)
+  document.getElementById("Megaupgrade").addEventListener("click", autoclicker)
+  function autoclicker() {
+    setInterval(clickHandler, 1000)
+  }
+  function clickHandler() {
+    score = score + scoreperclick
+    document.getElementById("NotCringe").innerText = score + "GAMES LOST"
+  }
+  if (score >= 5) {
+    score = score - 5
+    scorePerclick = 2
+  }
+  function upgrade() {
+    scoreperclick = 2
+  }
+</script>

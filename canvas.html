@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pizza time</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="800" height="800" </body>
+
+</html>
+<script>
+    var y = 20
+    var x = 100
+    var speed = 5
+    var canvas = document.getElementById("canvas")
+    var ctx = canvas.getContext("2d")
+
+    setInterval(drawFrame, 16)
+    function drawFrame() {
+        ctx.clearRect(0, 0, 800, 800)
+        ctx.fillRect(100, y, 100, 100)
+        y = y + speed
+        if (y > 400) {
+        speed = speed * -1
+        }
+        if(y < 0){
+            speed = speed * -1
+        }
+
+    }
+
+
+
+</script>

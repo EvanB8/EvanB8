@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #box {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            position: absolute;
+        }
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+</head>
+
+<body>
+    <div id="box"></div>
+</body>
+
+</html>
+<script>
+
+    var x = 100
+    var y = 100
+    var speed = 1
+    var speedx = 3
+    var speedy = 10
+    setInterval(moveBox, 50)
+    document.getElementById("box").style.left = x + "px"
+    if (x > 1000) {
+        speed = sped * -1
+    }
+    function clickHandler() {
+        speed = speed + speed
+    }
+    document.getElementById("box").addEventListener("keydown", keyHandler)
+    document.getElementById("box").style.top = y + "px"
+    function moveBox() {
+        x = x + speedx
+        y = y + speedy
+        document.getElementById("box").style.top = y + "px"
+        document.getElementById("box").style.left = x + "px"
+        if (x >= 1000) {
+            speed = speed * -1
+        }
+        if (x === 10) {
+            speed = speed * -1
+        }
+    }
+</script>
